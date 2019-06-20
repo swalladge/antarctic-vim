@@ -1,0 +1,439 @@
+<%
+    # RNB, A VIM COLORSCHEME TEMPLATE
+    # Author:        Romain Lafourcade (https://github.com/romainl)
+    # Canonical URL: https://gist.github.com/romainl/5cd2f4ec222805f49eca
+    # Modified 2019 by Samuel Walladge for this colorscheme
+
+    information = {
+        author:      "swalladge",
+        email:       "samuel@swalladge.net",
+        name:        "antarctic",
+        description: "A readable light theme",
+        background:  "light",
+        webpage:     "https://github.com/swalladge/antarctic-vim"
+    }
+
+    # all 256 colours and their 24bit hexcodes. This means the colorscheme will
+    # look the same in gvim, termguicolors, and 256 color. This colorscheme
+    # does not support <256 colors.
+    # color info from: https://jonasjacek.github.io/colors/
+    black_0 = ["#000000", 0]
+    maroon_1 = ["#800000", 1]
+    green_2 = ["#008000", 2]
+    olive_3 = ["#808000", 3]
+    navy_4 = ["#000080", 4]
+    purple_5 = ["#800080", 5]
+    teal_6 = ["#008080", 6]
+    silver_7 = ["#c0c0c0", 7]
+    grey_8 = ["#808080", 8]
+    red_9 = ["#ff0000", 9]
+    lime_10 = ["#00ff00", 10]
+    yellow_11 = ["#ffff00", 11]
+    blue_12 = ["#0000ff", 12]
+    fuchsia_13 = ["#ff00ff", 13]
+    aqua_14 = ["#00ffff", 14]
+    white_15 = ["#ffffff", 15]
+    grey_16 = ["#000000", 16]
+    navyblue_17 = ["#00005f", 17]
+    darkblue_18 = ["#000087", 18]
+    blue_19 = ["#0000af", 19]
+    blue_20 = ["#0000d7", 20]
+    blue_21 = ["#0000ff", 21]
+    darkgreen_22 = ["#005f00", 22]
+    deepskyblue_23 = ["#005f5f", 23]
+    deepskyblue_24 = ["#005f87", 24]
+    deepskyblue_25 = ["#005faf", 25]
+    dodgerblue_26 = ["#005fd7", 26]
+    dodgerblue_27 = ["#005fff", 27]
+    green_28 = ["#008700", 28]
+    springgreen_29 = ["#00875f", 29]
+    turquoise_30 = ["#008787", 30]
+    deepskyblue_31 = ["#0087af", 31]
+    deepskyblue_32 = ["#0087d7", 32]
+    dodgerblue_33 = ["#0087ff", 33]
+    green_34 = ["#00af00", 34]
+    springgreen_35 = ["#00af5f", 35]
+    darkcyan_36 = ["#00af87", 36]
+    lightseagreen_37 = ["#00afaf", 37]
+    deepskyblue_38 = ["#00afd7", 38]
+    deepskyblue_39 = ["#00afff", 39]
+    green_40 = ["#00d700", 40]
+    springgreen_41 = ["#00d75f", 41]
+    springgreen_42 = ["#00d787", 42]
+    cyan_43 = ["#00d7af", 43]
+    darkturquoise_44 = ["#00d7d7", 44]
+    turquoise_45 = ["#00d7ff", 45]
+    green_46 = ["#00ff00", 46]
+    springgreen_47 = ["#00ff5f", 47]
+    springgreen_48 = ["#00ff87", 48]
+    mediumspringgreen_49 = ["#00ffaf", 49]
+    cyan_50 = ["#00ffd7", 50]
+    cyan_51 = ["#00ffff", 51]
+    darkred_52 = ["#5f0000", 52]
+    deeppink_53 = ["#5f005f", 53]
+    purple_54 = ["#5f0087", 54]
+    purple_55 = ["#5f00af", 55]
+    purple_56 = ["#5f00d7", 56]
+    blueviolet_57 = ["#5f00ff", 57]
+    orange_58 = ["#5f5f00", 58]
+    grey_59 = ["#5f5f5f", 59]
+    mediumpurple_60 = ["#5f5f87", 60]
+    slateblue_61 = ["#5f5faf", 61]
+    slateblue_62 = ["#5f5fd7", 62]
+    royalblue_63 = ["#5f5fff", 63]
+    chartreuse_64 = ["#5f8700", 64]
+    darkseagreen_65 = ["#5f875f", 65]
+    paleturquoise_66 = ["#5f8787", 66]
+    steelblue_67 = ["#5f87af", 67]
+    steelblue_68 = ["#5f87d7", 68]
+    cornflowerblue_69 = ["#5f87ff", 69]
+    chartreuse_70 = ["#5faf00", 70]
+    darkseagreen_71 = ["#5faf5f", 71]
+    cadetblue_72 = ["#5faf87", 72]
+    cadetblue_73 = ["#5fafaf", 73]
+    skyblue_74 = ["#5fafd7", 74]
+    steelblue_75 = ["#5fafff", 75]
+    chartreuse_76 = ["#5fd700", 76]
+    palegreen_77 = ["#5fd75f", 77]
+    seagreen_78 = ["#5fd787", 78]
+    aquamarine_79 = ["#5fd7af", 79]
+    mediumturquoise_80 = ["#5fd7d7", 80]
+    steelblue_81 = ["#5fd7ff", 81]
+    chartreuse_82 = ["#5fff00", 82]
+    seagreen_83 = ["#5fff5f", 83]
+    seagreen_84 = ["#5fff87", 84]
+    seagreen_85 = ["#5fffaf", 85]
+    aquamarine_86 = ["#5fffd7", 86]
+    darkslategray_87 = ["#5fffff", 87]
+    darkred_88 = ["#870000", 88]
+    deeppink_89 = ["#87005f", 89]
+    darkmagenta_90 = ["#870087", 90]
+    darkmagenta_91 = ["#8700af", 91]
+    darkviolet_92 = ["#8700d7", 92]
+    purple_93 = ["#8700ff", 93]
+    orange_94 = ["#875f00", 94]
+    lightpink_95 = ["#875f5f", 95]
+    plum_96 = ["#875f87", 96]
+    mediumpurple_97 = ["#875faf", 97]
+    mediumpurple_98 = ["#875fd7", 98]
+    slateblue_99 = ["#875fff", 99]
+    yellow_100 = ["#878700", 100]
+    wheat_101 = ["#87875f", 101]
+    grey_102 = ["#878787", 102]
+    lightslategrey_103 = ["#8787af", 103]
+    mediumpurple_104 = ["#8787d7", 104]
+    lightslateblue_105 = ["#8787ff", 105]
+    yellow_106 = ["#87af00", 106]
+    darkolivegreen_107 = ["#87af5f", 107]
+    darkseagreen_108 = ["#87af87", 108]
+    lightskyblue_109 = ["#87afaf", 109]
+    lightskyblue_110 = ["#87afd7", 110]
+    skyblue_111 = ["#87afff", 111]
+    chartreuse_112 = ["#87d700", 112]
+    darkolivegreen_113 = ["#87d75f", 113]
+    palegreen_114 = ["#87d787", 114]
+    darkseagreen_115 = ["#87d7af", 115]
+    darkslategray_116 = ["#87d7d7", 116]
+    skyblue_117 = ["#87d7ff", 117]
+    chartreuse_118 = ["#87ff00", 118]
+    lightgreen_119 = ["#87ff5f", 119]
+    lightgreen_120 = ["#87ff87", 120]
+    palegreen_121 = ["#87ffaf", 121]
+    aquamarine_122 = ["#87ffd7", 122]
+    darkslategray_123 = ["#87ffff", 123]
+    red_124 = ["#af0000", 124]
+    deeppink_125 = ["#af005f", 125]
+    mediumvioletred_126 = ["#af0087", 126]
+    magenta_127 = ["#af00af", 127]
+    darkviolet_128 = ["#af00d7", 128]
+    purple_129 = ["#af00ff", 129]
+    darkorange_130 = ["#af5f00", 130]
+    indianred_131 = ["#af5f5f", 131]
+    hotpink_132 = ["#af5f87", 132]
+    mediumorchid_133 = ["#af5faf", 133]
+    mediumorchid_134 = ["#af5fd7", 134]
+    mediumpurple_135 = ["#af5fff", 135]
+    darkgoldenrod_136 = ["#af8700", 136]
+    lightsalmon_137 = ["#af875f", 137]
+    rosybrown_138 = ["#af8787", 138]
+    grey_139 = ["#af87af", 139]
+    mediumpurple_140 = ["#af87d7", 140]
+    mediumpurple_141 = ["#af87ff", 141]
+    gold_142 = ["#afaf00", 142]
+    darkkhaki_143 = ["#afaf5f", 143]
+    navajowhite_144 = ["#afaf87", 144]
+    grey_145 = ["#afafaf", 145]
+    lightsteelblue_146 = ["#afafd7", 146]
+    lightsteelblue_147 = ["#afafff", 147]
+    yellow_148 = ["#afd700", 148]
+    darkolivegreen_149 = ["#afd75f", 149]
+    darkseagreen_150 = ["#afd787", 150]
+    darkseagreen_151 = ["#afd7af", 151]
+    lightcyan_152 = ["#afd7d7", 152]
+    lightskyblue_153 = ["#afd7ff", 153]
+    greenyellow_154 = ["#afff00", 154]
+    darkolivegreen_155 = ["#afff5f", 155]
+    palegreen_156 = ["#afff87", 156]
+    darkseagreen_157 = ["#afffaf", 157]
+    darkseagreen_158 = ["#afffd7", 158]
+    paleturquoise_159 = ["#afffff", 159]
+    red_160 = ["#d70000", 160]
+    deeppink_161 = ["#d7005f", 161]
+    deeppink_162 = ["#d70087", 162]
+    magenta_163 = ["#d700af", 163]
+    magenta_164 = ["#d700d7", 164]
+    magenta_165 = ["#d700ff", 165]
+    darkorange_166 = ["#d75f00", 166]
+    indianred_167 = ["#d75f5f", 167]
+    hotpink_168 = ["#d75f87", 168]
+    hotpink_169 = ["#d75faf", 169]
+    orchid_170 = ["#d75fd7", 170]
+    mediumorchid_171 = ["#d75fff", 171]
+    orange_172 = ["#d78700", 172]
+    lightsalmon_173 = ["#d7875f", 173]
+    lightpink_174 = ["#d78787", 174]
+    pink_175 = ["#d787af", 175]
+    plum_176 = ["#d787d7", 176]
+    violet_177 = ["#d787ff", 177]
+    gold_178 = ["#d7af00", 178]
+    lightgoldenrod_179 = ["#d7af5f", 179]
+    tan_180 = ["#d7af87", 180]
+    mistyrose_181 = ["#d7afaf", 181]
+    thistle_182 = ["#d7afd7", 182]
+    plum_183 = ["#d7afff", 183]
+    yellow_184 = ["#d7d700", 184]
+    khaki_185 = ["#d7d75f", 185]
+    lightgoldenrod_186 = ["#d7d787", 186]
+    lightyellow_187 = ["#d7d7af", 187]
+    grey_188 = ["#d7d7d7", 188]
+    lightsteelblue_189 = ["#d7d7ff", 189]
+    yellow_190 = ["#d7ff00", 190]
+    darkolivegreen_191 = ["#d7ff5f", 191]
+    darkolivegreen_192 = ["#d7ff87", 192]
+    darkseagreen_193 = ["#d7ffaf", 193]
+    honeydew_194 = ["#d7ffd7", 194]
+    lightcyan_195 = ["#d7ffff", 195]
+    red_196 = ["#ff0000", 196]
+    deeppink_197 = ["#ff005f", 197]
+    deeppink_198 = ["#ff0087", 198]
+    deeppink_199 = ["#ff00af", 199]
+    magenta_200 = ["#ff00d7", 200]
+    magenta_201 = ["#ff00ff", 201]
+    orangered_202 = ["#ff5f00", 202]
+    indianred_203 = ["#ff5f5f", 203]
+    indianred_204 = ["#ff5f87", 204]
+    hotpink_205 = ["#ff5faf", 205]
+    hotpink_206 = ["#ff5fd7", 206]
+    mediumorchid_207 = ["#ff5fff", 207]
+    darkorange_208 = ["#ff8700", 208]
+    salmon_209 = ["#ff875f", 209]
+    lightcoral_210 = ["#ff8787", 210]
+    palevioletred_211 = ["#ff87af", 211]
+    orchid_212 = ["#ff87d7", 212]
+    orchid_213 = ["#ff87ff", 213]
+    orange_214 = ["#ffaf00", 214]
+    sandybrown_215 = ["#ffaf5f", 215]
+    lightsalmon_216 = ["#ffaf87", 216]
+    lightpink_217 = ["#ffafaf", 217]
+    pink_218 = ["#ffafd7", 218]
+    plum_219 = ["#ffafff", 219]
+    gold_220 = ["#ffd700", 220]
+    lightgoldenrod_221 = ["#ffd75f", 221]
+    lightgoldenrod_222 = ["#ffd787", 222]
+    navajowhite_223 = ["#ffd7af", 223]
+    mistyrose_224 = ["#ffd7d7", 224]
+    thistle_225 = ["#ffd7ff", 225]
+    yellow_226 = ["#ffff00", 226]
+    lightgoldenrod_227 = ["#ffff5f", 227]
+    khaki_228 = ["#ffff87", 228]
+    wheat_229 = ["#ffffaf", 229]
+    cornsilk_230 = ["#ffffd7", 230]
+    grey_231 = ["#ffffff", 231]
+    grey_232 = ["#080808", 232]
+    grey_233 = ["#121212", 233]
+    grey_234 = ["#1c1c1c", 234]
+    grey_235 = ["#262626", 235]
+    grey_236 = ["#303030", 236]
+    grey_237 = ["#3a3a3a", 237]
+    grey_238 = ["#444444", 238]
+    grey_239 = ["#4e4e4e", 239]
+    grey_240 = ["#585858", 240]
+    grey_241 = ["#626262", 241]
+    grey_242 = ["#6c6c6c", 242]
+    grey_243 = ["#767676", 243]
+    grey_244 = ["#808080", 244]
+    grey_245 = ["#8a8a8a", 245]
+    grey_246 = ["#949494", 246]
+    grey_247 = ["#9e9e9e", 247]
+    grey_248 = ["#a8a8a8", 248]
+    grey_249 = ["#b2b2b2", 249]
+    grey_250 = ["#bcbcbc", 250]
+    grey_251 = ["#c6c6c6", 251]
+    grey_252 = ["#d0d0d0", 252]
+    grey_253 = ["#dadada", 253]
+    grey_254 = ["#e4e4e4", 254]
+    grey_255 = ["#eeeeee", 255]
+
+    # semantic names for colours
+    background = grey_254
+    normal_text = grey_234
+
+    cursorline = cornsilk_230
+
+    # Highlights
+    #
+    # You can define highlight groups like this:
+    #
+    #   [ "Normal",       name of the highlight group
+    #     white,          the color used for background color, or use "NONE", "fg" or "bg"
+    #     darkgray,       the color used for foreground color, or use "NONE", "fg" or "bg"
+    #     "NONE"          style, can be "bold", "underline", "reverse", "italic",
+    #                     "standout", "NONE" or "undercurl"
+    #   ]
+    #
+    # The sample above tells Vim to render normal text in dark gray against a white
+    # background, without any styling.
+    #
+    # or link an highlight group to another:
+    #
+    #   [ "Title", "Normal" ]
+    #
+    # In GUI Vim, there is an additional color for the undercurl used to
+    # highlight spelling mistakes:
+    #
+    #   [ "SpellBad",     name of the highlight group
+    #     "NONE",         the color used for background color, or use "NONE", "fg" or "bg"
+    #     red,            the color used for foreground color, or use "NONE", "fg" or "bg"
+    #     "undercurl",    style
+    #     red             color used for the undercurl
+    #   ]
+    #
+    # The sample above tells Vim to render badly spelled words in red against the current
+    # background, with a red undercurl.
+    #
+    # You can add any custom highlight group to the standard list below but you shouldn't
+    # remove any if you want a working colorscheme.
+
+    highlights = [
+        [ "Normal", background, normal_text, "NONE" ],
+        [ "NonText", background, normal_text, "NONE" ],
+        [ "Comment", grey_253, grey_232, "italic" ],
+        [ "Constant", "NONE", blue_20, "NONE" ],
+        [ "Error", lightcoral_210, normal_text, "NONE" ],
+        [ "Identifier", "NONE", normal_text, "NONE" ],
+        [ "Ignore", "NONE", normal_text, "NONE" ],
+        [ "PreProc", "NONE", normal_text, "NONE" ],
+        [ "Special", "NONE", normal_text, "NONE" ],
+        [ "Statement", "NONE", normal_text, "NONE" ],
+        [ "String", "NONE", blue_20, "NONE" ],
+        [ "Number", "Constant" ],
+        [ "Todo", mistyrose_224, normal_text, "bold" ],
+        [ "Type", background, normal_text, "NONE" ],
+        [ "Underlined", background, normal_text, "underline" ],
+        [ "StatusLine", deepskyblue_24, grey_255, "NONE" ],
+        [ "StatusLineNC", grey_247, normal_text, "NONE" ],
+        [ "VertSplit", deepskyblue_24, deepskyblue_24, "NONE" ],
+        [ "TabLine", deepskyblue_24, grey_255, "NONE" ],
+        [ "TabLineFill", deepskyblue_24, deepskyblue_24, "NONE" ],
+        [ "TabLineSel", grey_255, normal_text, "NONE" ],
+        [ "Title", "NONE", normal_text, "NONE" ],
+        [ "CursorLine", cursorline, "NONE", "NONE" ],
+        [ "LineNr", grey_252, grey_240, "NONE" ],
+        [ "CursorLineNr", cursorline, normal_text, "NONE" ],
+        [ "helpLeadBlank", background, normal_text, "NONE" ],
+        [ "helpNormal", background, normal_text, "NONE" ],
+        [ "Visual", lightskyblue_153, "NONE", "NONE" ],
+        [ "VisualNOS", lightskyblue_153, "NONE", "NONE" ],
+        [ "Pmenu", grey_248, normal_text, "NONE" ],
+        [ "PmenuSbar", background, normal_text, "NONE" ],
+        [ "PmenuSel", background, normal_text, "NONE" ],
+        [ "PmenuThumb", background, normal_text, "NONE" ],
+        [ "FoldColumn", grey_249, grey_16, "NONE" ],
+        [ "Folded", grey_249, grey_16, "italic" ],
+        [ "WildMenu", cornsilk_230, normal_text, "NONE" ],
+        [ "SpecialKey", background, normal_text, "NONE" ],
+        [ "DiffAdd", darkseagreen_157, normal_text, "NONE" ],
+        [ "DiffChange", lightgoldenrod_222, normal_text, "NONE" ],
+        [ "DiffDelete", mistyrose_224, normal_text, "NONE" ],
+        [ "DiffText", yellow_226, normal_text, "NONE" ],
+        [ "Search", yellow_226, "NONE", "NONE" ],
+        [ "IncSearch", "Search"],
+        [ "Directory", background, normal_text, "NONE" ],
+        [ "MatchParen", springgreen_47, normal_text, "NONE" ],
+        [ "SpellBad", mistyrose_224, normal_text, "NONE" ],
+        [ "SpellCap", plum_219, normal_text, "NONE" ],
+        [ "SpellLocal", navajowhite_223, normal_text, "NONE" ],
+        [ "SpellRare", honeydew_194, normal_text, "NONE" ],
+        [ "ColorColumn", background, "NONE", "NONE" ],
+        [ "SignColumn", background, normal_text, "NONE" ],
+        [ "ErrorMsg", pink_218, normal_text, "NONE" ],
+        [ "ModeMsg", background, normal_text, "NONE" ],
+        [ "MoreMsg", background, normal_text, "NONE" ],
+        [ "Question", background, normal_text, "NONE" ],
+        [ "WarningMsg", "Error" ],
+        [ "Cursor", grey_232, "NONE", "NONE" ],
+        [ "CursorColumn", cornsilk_230, "NONE", "NONE" ],
+        [ "QuickFixLine", "Search" ],
+        [ "StatusLineTerm", deepskyblue_24, grey_255, "NONE" ],
+        [ "StatusLineTermNC", background, normal_text, "NONE" ],
+        [ "Keyword", "NONE", normal_text, "NONE" ],
+        [ "Character", "String" ],
+        [ "helpHyperTextJump", "NONE", blue_20, "underline" ],
+        [ "diffAdded", "DiffAdd" ],
+        [ "diffRemoved", "DiffDelete" ],
+    ]
+
+    # Define the color palette used by :terminal when in GUI Vim
+    # or in TUI Vim when 'termguicolors' is enabled. If this list
+    # is empty or if it doesn't contain exactly 16 items, the corresponding
+    # Vim variable won't be set.
+    #
+    # The expected values are colors defined in step 2.
+    terminal_ansi_colors = [
+    ]
+
+-%>
+" <%= information[:name] %>.vim -- Vim color scheme.
+" Author:      <%= information[:author] %> (<%= information[:email] %>)
+" Webpage:     <%= information[:webpage] %>
+" Description: <%= information[:description] %>
+
+hi clear
+
+if exists("syntax_on")
+  syntax reset
+endif
+
+let colors_name = "<%= information[:name].downcase %>"
+
+<% for highlight in highlights -%>
+<% if highlight.length == 4 -%>
+hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %>
+<% if highlight[0] == "Normal" -%>
+<%= '' %>
+set background=<%= information[:background] %>
+<%= '' %>
+<% end -%>
+<% elsif highlight.length > 4 -%>
+hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %> guisp=<%= highlight[4].kind_of?(String) ? highlight[4] : highlight[4][0] %>
+<% end -%>
+<% end -%>
+<% links = highlights.select do |highlight| -%>
+<% highlight.length == 2 -%>
+<% end -%>
+<% if links.length > 0 -%>
+<%= '' %>
+<% for link in links -%>
+hi link <%= link[0] %> <%= link[1] %>
+<% end -%>
+<% end -%>
+<% if terminal_ansi_colors.length == 16 -%>
+<%= '' %>
+let g:terminal_ansi_colors = [
+<% for color in terminal_ansi_colors -%>
+        \ '<%= color[0] %>',
+<% end -%>
+        \ ]
+<% end -%>
+
+" Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
