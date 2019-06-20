@@ -277,7 +277,6 @@
     # semantic names for colours
     background = grey_254
     normal_text = grey_234
-
     cursorline = cornsilk_230
 
     # Highlights
@@ -308,7 +307,7 @@
     #     red             color used for the undercurl
     #   ]
     #
-    # The sample above tells Vim to render badly spelled words in red against the current
+    # TODO The sample above tells Vim to render badly spelled words in red against the current
     # background, with a red undercurl.
     #
     # You can add any custom highlight group to the standard list below but you shouldn't
@@ -317,19 +316,19 @@
     highlights = [
         [ "Normal", background, normal_text, "NONE" ],
         [ "NonText", background, normal_text, "NONE" ],
-        [ "Comment", grey_253, grey_232, "italic" ],
-        [ "Constant", "NONE", blue_20, "NONE" ],
+        [ "Comment", grey_252, normal_text, "NONE" ],
+        [ "Constant", "NONE", normal_text, "NONE" ],
         [ "Error", lightcoral_210, normal_text, "NONE" ],
         [ "Identifier", "NONE", normal_text, "NONE" ],
         [ "Ignore", "NONE", normal_text, "NONE" ],
         [ "PreProc", "NONE", normal_text, "NONE" ],
         [ "Special", "NONE", normal_text, "NONE" ],
         [ "Statement", "NONE", normal_text, "NONE" ],
-        [ "String", "NONE", blue_20, "NONE" ],
+        [ "String", "NONE", normal_text, "NONE" ],
         [ "Number", "Constant" ],
-        [ "Todo", mistyrose_224, normal_text, "bold" ],
-        [ "Type", background, normal_text, "NONE" ],
-        [ "Underlined", background, normal_text, "underline" ],
+        [ "Todo", lightskyblue_153, normal_text, "NONE" ],
+        [ "Type", "NONE", normal_text, "NONE" ],
+        [ "Underlined", "NONE", normal_text, "underline" ],
         [ "StatusLine", deepskyblue_24, grey_255, "NONE" ],
         [ "StatusLineNC", grey_247, normal_text, "NONE" ],
         [ "VertSplit", deepskyblue_24, deepskyblue_24, "NONE" ],
@@ -337,33 +336,32 @@
         [ "TabLineFill", deepskyblue_24, deepskyblue_24, "NONE" ],
         [ "TabLineSel", grey_255, normal_text, "NONE" ],
         [ "Title", "NONE", normal_text, "NONE" ],
-        [ "CursorLine", cursorline, "NONE", "NONE" ],
         [ "LineNr", grey_252, grey_240, "NONE" ],
         [ "CursorLineNr", cursorline, normal_text, "NONE" ],
-        [ "helpLeadBlank", background, normal_text, "NONE" ],
-        [ "helpNormal", background, normal_text, "NONE" ],
+        [ "helpLeadBlank", "NONE", normal_text, "NONE" ],
+        [ "helpNormal", "NONE", normal_text, "NONE" ],
         [ "Visual", lightskyblue_153, "NONE", "NONE" ],
         [ "VisualNOS", lightskyblue_153, "NONE", "NONE" ],
         [ "Pmenu", grey_248, normal_text, "NONE" ],
         [ "PmenuSbar", background, normal_text, "NONE" ],
         [ "PmenuSel", background, normal_text, "NONE" ],
         [ "PmenuThumb", background, normal_text, "NONE" ],
-        [ "FoldColumn", grey_249, grey_16, "NONE" ],
-        [ "Folded", grey_249, grey_16, "italic" ],
+        [ "FoldColumn", grey_249, normal_text, "NONE" ],
+        [ "Folded", grey_249, normal_text, "italic" ],
         [ "WildMenu", cornsilk_230, normal_text, "NONE" ],
-        [ "SpecialKey", background, normal_text, "NONE" ],
+        [ "SpecialKey", "NONE", normal_text, "NONE" ],
         [ "DiffAdd", darkseagreen_157, normal_text, "NONE" ],
         [ "DiffChange", lightgoldenrod_222, normal_text, "NONE" ],
         [ "DiffDelete", mistyrose_224, normal_text, "NONE" ],
-        [ "DiffText", yellow_226, normal_text, "NONE" ],
+        [ "DiffText", wheat_229, normal_text, "NONE" ],
         [ "Search", yellow_226, "NONE", "NONE" ],
         [ "IncSearch", "Search"],
-        [ "Directory", background, normal_text, "NONE" ],
+        [ "Directory", "NONE", normal_text, "NONE" ],
         [ "MatchParen", springgreen_47, normal_text, "NONE" ],
         [ "SpellBad", mistyrose_224, normal_text, "NONE" ],
         [ "SpellCap", plum_219, normal_text, "NONE" ],
         [ "SpellLocal", navajowhite_223, normal_text, "NONE" ],
-        [ "SpellRare", honeydew_194, normal_text, "NONE" ],
+        [ "SpellRare", thistle_225, normal_text, "NONE" ],
         [ "ColorColumn", background, "NONE", "NONE" ],
         [ "SignColumn", background, normal_text, "NONE" ],
         [ "ErrorMsg", pink_218, normal_text, "NONE" ],
@@ -372,15 +370,17 @@
         [ "Question", background, normal_text, "NONE" ],
         [ "WarningMsg", "Error" ],
         [ "Cursor", grey_232, "NONE", "NONE" ],
-        [ "CursorColumn", cornsilk_230, "NONE", "NONE" ],
+        [ "CursorLine", cursorline, "NONE", "NONE" ],
+        [ "CursorColumn", cursorline, "NONE", "NONE" ],
         [ "QuickFixLine", "Search" ],
         [ "StatusLineTerm", deepskyblue_24, grey_255, "NONE" ],
         [ "StatusLineTermNC", background, normal_text, "NONE" ],
         [ "Keyword", "NONE", normal_text, "NONE" ],
-        [ "Character", "String" ],
+        [ "Character", "NONE", normal_text, "NONE" ],
         [ "helpHyperTextJump", "NONE", blue_20, "underline" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ],
+        [ "EndOfBuffer", "ColorColumn" ],
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
