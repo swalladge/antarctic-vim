@@ -34,7 +34,7 @@ hi VertSplit ctermbg=24 ctermfg=24 cterm=NONE guibg=#005f87 guifg=#005f87 gui=NO
 hi TabLine ctermbg=24 ctermfg=255 cterm=NONE guibg=#005f87 guifg=#eeeeee gui=NONE
 hi TabLineFill ctermbg=24 ctermfg=24 cterm=NONE guibg=#005f87 guifg=#005f87 gui=NONE
 hi TabLineSel ctermbg=255 ctermfg=234 cterm=NONE guibg=#eeeeee guifg=#1c1c1c gui=NONE
-hi Title ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
+hi Title ctermbg=NONE ctermfg=234 cterm=bold guibg=NONE guifg=#1c1c1c gui=bold
 hi LineNr ctermbg=252 ctermfg=240 cterm=NONE guibg=#d0d0d0 guifg=#585858 gui=NONE
 hi CursorLineNr ctermbg=230 ctermfg=234 cterm=NONE guibg=#ffffd7 guifg=#1c1c1c gui=NONE
 hi helpLeadBlank ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
