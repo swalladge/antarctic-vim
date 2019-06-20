@@ -22,7 +22,13 @@ published on GitHub so I can install it with the rest of the Vim plugins I use.
 Most colour and typography choices are arbitrary and reflect my whims or
 laziness.
 
-Example screenshot: TODO
+## Screenshots
+
+![](https://static.swalladge.net/vim/antarctic-vim/screenshot1.png)
+
+![](https://static.swalladge.net/vim/antarctic-vim/screenshot2.png)
+
+![](https://static.swalladge.net/vim/antarctic-vim/screenshot3.png)
 
 
 ## Installation
