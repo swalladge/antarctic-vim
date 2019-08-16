@@ -24,8 +24,8 @@ hi Ignore ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
 hi PreProc ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
 hi Special ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
 hi Statement ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
-hi String ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
-hi Todo ctermbg=153 ctermfg=234 cterm=NONE guibg=#afd7ff guifg=#1c1c1c gui=NONE
+hi String ctermbg=NONE ctermfg=18 cterm=NONE guibg=NONE guifg=#000087 gui=NONE
+hi Todo ctermbg=157 ctermfg=234 cterm=NONE guibg=#afffaf guifg=#1c1c1c gui=NONE
 hi Type ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
 hi Underlined ctermbg=NONE ctermfg=234 cterm=underline guibg=NONE guifg=#1c1c1c gui=underline
 hi StatusLine ctermbg=24 ctermfg=255 cterm=NONE guibg=#005f87 guifg=#eeeeee gui=NONE
@@ -74,10 +74,11 @@ hi StatusLineTermNC ctermbg=254 ctermfg=234 cterm=NONE guibg=#e4e4e4 guifg=#1c1c
 hi Keyword ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
 hi Character ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
 hi helpHyperTextJump ctermbg=NONE ctermfg=20 cterm=underline guibg=NONE guifg=#0000d7 gui=underline
+hi HighlightedyankRegion ctermbg=222 ctermfg=234 cterm=NONE guibg=#ffd787 guifg=#1c1c1c gui=NONE
 
 hi link Number Constant
 hi link IncSearch Search
-hi link WarningMsg Error
+hi link WarningMsg ErrorMsg
 hi link QuickFixLine Search
 hi link diffAdded DiffAdd
 hi link diffRemoved DiffDelete

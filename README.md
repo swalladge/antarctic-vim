@@ -5,6 +5,10 @@ A bleak, functional colorscheme with a splash of colour where needed.
 Copyright © 2019 Samuel Walladge
 
 
+TODO:
+- folds muted so other text stands out more
+
+
 ## About
 
 A light colour scheme designed to be functional. It is not designed to look
