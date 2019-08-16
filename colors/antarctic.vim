@@ -46,7 +46,7 @@ hi PmenuSbar ctermbg=254 ctermfg=234 cterm=NONE guibg=#e4e4e4 guifg=#1c1c1c gui=
 hi PmenuSel ctermbg=254 ctermfg=234 cterm=NONE guibg=#e4e4e4 guifg=#1c1c1c gui=NONE
 hi PmenuThumb ctermbg=254 ctermfg=234 cterm=NONE guibg=#e4e4e4 guifg=#1c1c1c gui=NONE
 hi FoldColumn ctermbg=249 ctermfg=234 cterm=NONE guibg=#b2b2b2 guifg=#1c1c1c gui=NONE
-hi Folded ctermbg=249 ctermfg=234 cterm=italic guibg=#b2b2b2 guifg=#1c1c1c gui=italic
+hi Folded ctermbg=253 ctermfg=237 cterm=italic guibg=#dadada guifg=#3a3a3a gui=italic
 hi WildMenu ctermbg=230 ctermfg=234 cterm=NONE guibg=#ffffd7 guifg=#1c1c1c gui=NONE
 hi SpecialKey ctermbg=NONE ctermfg=234 cterm=NONE guibg=NONE guifg=#1c1c1c gui=NONE
 hi DiffAdd ctermbg=157 ctermfg=234 cterm=NONE guibg=#afffaf guifg=#1c1c1c gui=NONE
