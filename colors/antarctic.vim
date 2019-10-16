@@ -66,6 +66,7 @@ hi ErrorMsg ctermbg=218 ctermfg=234 cterm=NONE guibg=#ffafd7 guifg=#1c1c1c gui=N
 hi ModeMsg ctermbg=254 ctermfg=234 cterm=NONE guibg=#e4e4e4 guifg=#1c1c1c gui=NONE
 hi MoreMsg ctermbg=254 ctermfg=234 cterm=NONE guibg=#e4e4e4 guifg=#1c1c1c gui=NONE
 hi Question ctermbg=254 ctermfg=234 cterm=NONE guibg=#e4e4e4 guifg=#1c1c1c gui=NONE
+hi WarningMsg ctermbg=218 ctermfg=234 cterm=NONE guibg=#ffafd7 guifg=#1c1c1c gui=NONE
 hi Cursor ctermbg=232 ctermfg=NONE cterm=NONE guibg=#080808 guifg=NONE gui=NONE
 hi CursorLine ctermbg=230 ctermfg=NONE cterm=NONE guibg=#ffffd7 guifg=NONE gui=NONE
 hi CursorColumn ctermbg=230 ctermfg=NONE cterm=NONE guibg=#ffffd7 guifg=NONE gui=NONE
@@ -78,7 +79,6 @@ hi HighlightedyankRegion ctermbg=222 ctermfg=234 cterm=NONE guibg=#ffd787 guifg=
 
 hi link Number Constant
 hi link IncSearch Search
-hi link WarningMsg ErrorMsg
 hi link QuickFixLine Search
 hi link diffAdded DiffAdd
 hi link diffRemoved DiffDelete
