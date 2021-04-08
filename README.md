@@ -54,9 +54,8 @@ if you feel your changes may benefit the wider community.
 ## Development
 
 This colour scheme is developed using
-[romainl](https://github.com/romainl/)'s [erb
-template](https://gist.github.com/romainl/5cd2f4ec222805f49eca). Ruby must be
-installed (for the `erb` command).
+[romainl's erb template](https://github.com/romainl/vim-rnb).
+Ruby must be installed (for the `erb` command).
 
 Edit the variables in `colors/paper.erb` and run `make` to build
 `colors/antarctic.vim`. `colors/antarctic.vim` should not be edited directly.

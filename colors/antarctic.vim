@@ -83,4 +83,5 @@ hi link diffAdded DiffAdd
 hi link diffRemoved DiffDelete
 hi link EndOfBuffer ColorColumn
 
-" Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
+
+" Generated with a modified version of RNB (https://github.com/romainl/vim-rnb)
